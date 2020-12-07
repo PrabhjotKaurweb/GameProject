@@ -25,14 +25,6 @@ namespace GameProject
 
       
 
-
-        private void SHOOTONHEAD_BTN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
         private void LOAD_BTN_Click(object sender, EventArgs e)
         {
             SPIN_BTN.Enabled = true;
@@ -41,31 +33,27 @@ namespace GameProject
 
         private void EXIT_BTN_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
 
         private void SPIN_BTN_Click(object sender, EventArgs e)
         {
             SHOOTAWAY_BTN.Enabled = true;
             SHOOTONHEAD_BTN.Enabled = true;
-            LOAD_BTN.Enabled = false;
+            SPIN_BTN.Enabled = false;
+
         }
 
-    
-       
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PLAY_BTN_Click(object sender, EventArgs e)
         {
-            //code to display image in picture box on button click   
-
-            Assembly myAssembly = Assembly.GetExecutingAssembly();
-
-            Stream myStream = myAssembly.GetManifestResourceStream("ProjectName.Resources.about_us_image.jpg");
-
-            Bitmap bmp_Object = new Bitmap(myStream);
-
-            pictureBox1.Image = bmp_Object;
-
-.
+            Application.Restart();
         }
+
+        private void SHOOTONHEAD_BTN_CLICK(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
 }

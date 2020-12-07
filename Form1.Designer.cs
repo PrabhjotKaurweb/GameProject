@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace GameProject
 {
     partial class Game_form
@@ -125,6 +127,7 @@ namespace GameProject
             this.PLAY_BTN.TabIndex = 6;
             this.PLAY_BTN.Text = "PLAY";
             this.PLAY_BTN.UseVisualStyleBackColor = false;
+            this.PLAY_BTN.Click += new System.EventHandler(this.PLAY_BTN_Click);
             // 
             // EXIT_BTN
             // 
@@ -162,6 +165,11 @@ namespace GameProject
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Button LOAD_BTN;
@@ -172,6 +180,8 @@ namespace GameProject
         private System.Windows.Forms.LinkLabel GAMEPROJECT;
         private System.Windows.Forms.Button PLAY_BTN;
         private System.Windows.Forms.Button EXIT_BTN;
+
+        public EventHandler SHOOTONHEAD_BTN_Click { get; private set; }
     }
 }
 
