@@ -14,12 +14,13 @@ namespace GameProject
 {
     public partial class Game_form : Form
     {
+        Game_Logic Obj_Logic = new Game_Logic();
         public Game_form()
         {
             InitializeComponent();
-            SPIN_BTN.Enabled = false;
-            SHOOTONHEAD_BTN.Enabled = false;
-            SHOOTAWAY_BTN.Enabled = false;
+            SPIN_BTN.Enabled = false; // disables the spin button
+            SHOOTONHEAD_BTN.Enabled = false; // disables shootonhead button
+            SHOOTAWAY_BTN.Enabled = false; // disables shootaway buttton 
             
         }
 
@@ -27,31 +28,40 @@ namespace GameProject
 
         private void LOAD_BTN_Click(object sender, EventArgs e)
         {
-            SPIN_BTN.Enabled = true;
-            LOAD_BTN.Enabled = false;
+            SPIN_BTN.Enabled = true; // enables the spin button 
+            LOAD_BTN.Enabled = false; // disables the load button 
+
+            //load logic
+            Obj_Logic.load_positon = 1;
         }
 
         private void EXIT_BTN_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Application.Restart(); // enables exit restart button 
         }
 
         private void SPIN_BTN_Click(object sender, EventArgs e)
         {
-            SHOOTAWAY_BTN.Enabled = true;
-            SHOOTONHEAD_BTN.Enabled = true;
-            SPIN_BTN.Enabled = false;
+            SHOOTAWAY_BTN.Enabled = true; // enables shootaway button 
+            SHOOTONHEAD_BTN.Enabled = true; // enables shootonhead button
+            SPIN_BTN.Enabled = false; // disable spin button
+
+            // spin the bullet 
+            Random Obj_random = new Random();
+            Obj_Logic.spin_bullet = Object random.Next(1, 7);
+            MessageBox.Show("Bullet postion" + Obj_Logic.Bullet_Postion);
+
 
         }
 
         private void PLAY_BTN_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Application.Restart(); // enables restart button 
         }
 
         private void SHOOTONHEAD_BTN_CLICK(object sender, EventArgs e)
         {
-
+          
         }
 
     }

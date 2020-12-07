@@ -31,15 +31,14 @@ namespace GameProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_form));
             this.LOAD_BTN = new System.Windows.Forms.Button();
             this.SPIN_BTN = new System.Windows.Forms.Button();
             this.SHOOTONHEAD_BTN = new System.Windows.Forms.Button();
             this.SHOOTAWAY_BTN = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GAMEPROJECT = new System.Windows.Forms.LinkLabel();
             this.PLAY_BTN = new System.Windows.Forms.Button();
             this.EXIT_BTN = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +79,6 @@ namespace GameProject
             this.SHOOTONHEAD_BTN.TabIndex = 2;
             this.SHOOTONHEAD_BTN.Text = "SHOOT ON HEAD";
             this.SHOOTONHEAD_BTN.UseVisualStyleBackColor = false;
-            this.SHOOTONHEAD_BTN.Click += new System.EventHandler(this.SHOOTONHEAD_BTN_Click);
             // 
             // SHOOTAWAY_BTN
             // 
@@ -93,16 +91,6 @@ namespace GameProject
             this.SHOOTAWAY_BTN.TabIndex = 3;
             this.SHOOTAWAY_BTN.Text = "SHOOT AWAY ";
             this.SHOOTAWAY_BTN.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(212, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(319, 162);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // GAMEPROJECT
             // 
@@ -142,16 +130,24 @@ namespace GameProject
             this.EXIT_BTN.UseVisualStyleBackColor = false;
             this.EXIT_BTN.Click += new System.EventHandler(this.EXIT_BTN_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(244, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(287, 179);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Game_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(736, 415);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EXIT_BTN);
             this.Controls.Add(this.PLAY_BTN);
             this.Controls.Add(this.GAMEPROJECT);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SHOOTAWAY_BTN);
             this.Controls.Add(this.SHOOTONHEAD_BTN);
             this.Controls.Add(this.SPIN_BTN);
@@ -176,10 +172,10 @@ namespace GameProject
         private System.Windows.Forms.Button SPIN_BTN;
         private System.Windows.Forms.Button SHOOTONHEAD_BTN;
         private System.Windows.Forms.Button SHOOTAWAY_BTN;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel GAMEPROJECT;
         private System.Windows.Forms.Button PLAY_BTN;
         private System.Windows.Forms.Button EXIT_BTN;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         public EventHandler SHOOTONHEAD_BTN_Click { get; private set; }
     }
