@@ -61,9 +61,34 @@ namespace GameProject
 
         private void SHOOTONHEAD_BTN_CLICK(object sender, EventArgs e)
         {
-          
+            Obj_Logic.Fire = Obj_Logic.shoot();
+            if (Logic.Fire == 1)
+            {
+                MessageBox.Show("Sorry, you are dead now");
+            }
+            else
+            {
+                MessageBox.Show("Empty Show");
+            }
         }
-
+        private void SHOOTAWAY_BTN_CLICK(object sender, EventArgs e)
+        {
+            if(Obj_Logic.chances <=2 )
+            {
+                Obj_Logic.Fire = Obj_Logic.shoot();
+                if (Obj_Logic.Fire == 1)
+                {
+                    MessageBox.Show("Wow, you are safe");
+                    SHOOTAWAY_BTN.Enabled = false;
+                    SHOOTONHEAD_BTN.Enabled = false; 
+                }
+                else
+                {
+                    MessageBox.Show("Empty shot");
+                }
+                Obj_Logic.chances++
+            }
+        }
     }
 
 }
