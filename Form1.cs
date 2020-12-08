@@ -32,7 +32,7 @@ namespace GameProject
             LOAD_BTN.Enabled = false; // disables the load button 
 
             //load logic
-            Obj_Logic.load_positon = 1;
+            Obj_Logic.Hammer_positon = 1;
         }
 
         private void EXIT_BTN_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace GameProject
 
             // spin the bullet 
             Random Obj_random = new Random();
-            Obj_Logic.spin_bullet = Object random.Next(1, 7);
-            MessageBox.Show("Bullet postion" + Obj_Logic.Bullet_Postion);
+            Obj_Logic.Bullet_Position = Obj_random.Next(1, 7);
+            MessageBox.Show("Bullet postion" + Obj_Logic.Bullet_Position);
 
 
         }
@@ -62,7 +62,7 @@ namespace GameProject
         private void SHOOTONHEAD_BTN_CLICK(object sender, EventArgs e)
         {
             Obj_Logic.Fire = Obj_Logic.shoot();
-            if (Logic.Fire == 1)
+            if (Obj_Logic.Fire == 1)
             {
                 MessageBox.Show("Sorry, you are dead now");
             }
@@ -86,7 +86,18 @@ namespace GameProject
                 {
                     MessageBox.Show("Empty shot");
                 }
-                Obj_Logic.chances++
+                Obj_Logic.chances++;
+                if (Obj_Logic.chances == 3)
+                {
+                    MessageBox.Show("Your lifelines are finished");
+                    SHOOTAWAY_BTN.Enabled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Your lifelines are finished");
+                SHOOTAWAY_BTN.Enabled = false;
+                   
             }
         }
     }
