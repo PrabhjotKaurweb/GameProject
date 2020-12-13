@@ -12,6 +12,9 @@ namespace GameProject
         public int Bullet_Positon;
         public int Fire_on_head;
 
+        public int Hammer_Position { get; private set; }
+        public int Bullet_Position { get; private set; }
+
         public int shoot()
         {
             if (Hammer_Position == Bullet_Positon)

@@ -155,6 +155,7 @@ namespace GameProject
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Game_form";
             this.Text = "Game form";
+            this.Load += new System.EventHandler(this.Game_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -100,6 +100,11 @@ namespace GameProject
                    
             }
         }
+
+        private void Game_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
