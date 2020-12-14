@@ -1,33 +1,32 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GameProject;
 
-namespace UnitTestProject1
+namespace UnitTest1Project
 {
     [TestClass]
-    public class UnitTest1
+    public class RRTest
     {
-        Game_Logic obj_GameLogic = new Game_Logic();
+        //characterizing an article with in the class Roullete
+
+        Game_logic Obj_test = new Game_logic();
+        //first testing
         [TestMethod]
-        public void Fire()
+        public void positive()
         {
-           obj_GameLogic.Hammer_Position = 1;
-           obj_GameLogic.Bullet_Position = 1;
-
-            int ExpectedResult = obj_GameLogic.shoot();
-            Assert.AreEqual(1, ExpectedResult);
+            //Real - we need to give some information to get a yield
+            var actual = Obj_test.Bulleteloop(5);
+            //Declare - we need to check the yield we get is right or not
+            Assert.AreEqual(expected: 6, actual);
         }
-
-        
+        //Second testing
         [TestMethod]
-        public void NotFire()
+        public void Negative()
         {
-            obj_Logic.Hammer_Position = 1;
-            obj_Logic.Bullet_Position = 5;
-
-            int ExpectedResult = obj_GameLogic.shoot();
-            Assert.AreEqual(0, ExpectedResult);
+            //Act - we need to give some information to get a yield
+            var actual = Obj_test.Bulleteloop(4);
+            //State - we need to check the yield we get is right or not
+            Assert.AreNotEqual(notExpected: 3, actual);
         }
-
     }
 }

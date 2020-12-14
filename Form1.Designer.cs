@@ -31,15 +31,16 @@ namespace GameProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_form));
             this.LOAD_BTN = new System.Windows.Forms.Button();
             this.SPIN_BTN = new System.Windows.Forms.Button();
-            this.SHOOTONHEAD_BTN = new System.Windows.Forms.Button();
+            this.BTN_SHOOT = new System.Windows.Forms.Button();
             this.SHOOTAWAY_BTN = new System.Windows.Forms.Button();
             this.GAMEPROJECT = new System.Windows.Forms.LinkLabel();
-            this.PLAY_BTN = new System.Windows.Forms.Button();
+            this.BTN_PLAYAGAIN = new System.Windows.Forms.Button();
             this.EXIT_BTN = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picbox_main = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_main)).BeginInit();
             this.SuspendLayout();
             // 
             // LOAD_BTN
@@ -47,7 +48,7 @@ namespace GameProject
             this.LOAD_BTN.BackColor = System.Drawing.Color.Teal;
             this.LOAD_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LOAD_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LOAD_BTN.Location = new System.Drawing.Point(12, 331);
+            this.LOAD_BTN.Location = new System.Drawing.Point(12, 249);
             this.LOAD_BTN.Name = "LOAD_BTN";
             this.LOAD_BTN.Size = new System.Drawing.Size(143, 49);
             this.LOAD_BTN.TabIndex = 0;
@@ -68,54 +69,56 @@ namespace GameProject
             this.SPIN_BTN.UseVisualStyleBackColor = false;
             this.SPIN_BTN.Click += new System.EventHandler(this.SPIN_BTN_Click);
             // 
-            // SHOOTONHEAD_BTN
+            // BTN_SHOOT
             // 
-            this.SHOOTONHEAD_BTN.BackColor = System.Drawing.Color.Teal;
-            this.SHOOTONHEAD_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SHOOTONHEAD_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SHOOTONHEAD_BTN.Location = new System.Drawing.Point(326, 331);
-            this.SHOOTONHEAD_BTN.Name = "SHOOTONHEAD_BTN";
-            this.SHOOTONHEAD_BTN.Size = new System.Drawing.Size(205, 49);
-            this.SHOOTONHEAD_BTN.TabIndex = 2;
-            this.SHOOTONHEAD_BTN.Text = "SHOOT ON HEAD";
-            this.SHOOTONHEAD_BTN.UseVisualStyleBackColor = false;
+            this.BTN_SHOOT.BackColor = System.Drawing.Color.Teal;
+            this.BTN_SHOOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_SHOOT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BTN_SHOOT.Location = new System.Drawing.Point(326, 331);
+            this.BTN_SHOOT.Name = "BTN_SHOOT";
+            this.BTN_SHOOT.Size = new System.Drawing.Size(205, 49);
+            this.BTN_SHOOT.TabIndex = 2;
+            this.BTN_SHOOT.Text = "SHOOT ON HEAD";
+            this.BTN_SHOOT.UseVisualStyleBackColor = false;
+            this.BTN_SHOOT.Click += new System.EventHandler(this.BTN_SHOOT_Click);
             // 
             // SHOOTAWAY_BTN
             // 
             this.SHOOTAWAY_BTN.BackColor = System.Drawing.Color.Teal;
             this.SHOOTAWAY_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SHOOTAWAY_BTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SHOOTAWAY_BTN.Location = new System.Drawing.Point(549, 331);
+            this.SHOOTAWAY_BTN.Location = new System.Drawing.Point(563, 249);
             this.SHOOTAWAY_BTN.Name = "SHOOTAWAY_BTN";
             this.SHOOTAWAY_BTN.Size = new System.Drawing.Size(175, 49);
             this.SHOOTAWAY_BTN.TabIndex = 3;
             this.SHOOTAWAY_BTN.Text = "SHOOT AWAY ";
             this.SHOOTAWAY_BTN.UseVisualStyleBackColor = false;
+            this.SHOOTAWAY_BTN.Click += new System.EventHandler(this.SHOOTAWAY_BTN_Click);
             // 
             // GAMEPROJECT
             // 
             this.GAMEPROJECT.AutoSize = true;
             this.GAMEPROJECT.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GAMEPROJECT.LinkColor = System.Drawing.Color.White;
-            this.GAMEPROJECT.Location = new System.Drawing.Point(259, 29);
+            this.GAMEPROJECT.Location = new System.Drawing.Point(254, 9);
             this.GAMEPROJECT.Name = "GAMEPROJECT";
             this.GAMEPROJECT.Size = new System.Drawing.Size(235, 31);
             this.GAMEPROJECT.TabIndex = 5;
             this.GAMEPROJECT.TabStop = true;
             this.GAMEPROJECT.Text = "GAME PROJECT ";
             // 
-            // PLAY_BTN
+            // BTN_PLAYAGAIN
             // 
-            this.PLAY_BTN.BackColor = System.Drawing.Color.Teal;
-            this.PLAY_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PLAY_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PLAY_BTN.Location = new System.Drawing.Point(50, 138);
-            this.PLAY_BTN.Name = "PLAY_BTN";
-            this.PLAY_BTN.Size = new System.Drawing.Size(105, 41);
-            this.PLAY_BTN.TabIndex = 6;
-            this.PLAY_BTN.Text = "PLAY";
-            this.PLAY_BTN.UseVisualStyleBackColor = false;
-            this.PLAY_BTN.Click += new System.EventHandler(this.PLAY_BTN_Click);
+            this.BTN_PLAYAGAIN.BackColor = System.Drawing.Color.Teal;
+            this.BTN_PLAYAGAIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_PLAYAGAIN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_PLAYAGAIN.Location = new System.Drawing.Point(12, 138);
+            this.BTN_PLAYAGAIN.Name = "BTN_PLAYAGAIN";
+            this.BTN_PLAYAGAIN.Size = new System.Drawing.Size(127, 70);
+            this.BTN_PLAYAGAIN.TabIndex = 6;
+            this.BTN_PLAYAGAIN.Text = "PLAY AGAIN";
+            this.BTN_PLAYAGAIN.UseVisualStyleBackColor = false;
+            this.BTN_PLAYAGAIN.Click += new System.EventHandler(this.PLAY_BTN_Click);
             // 
             // EXIT_BTN
             // 
@@ -130,13 +133,14 @@ namespace GameProject
             this.EXIT_BTN.UseVisualStyleBackColor = false;
             this.EXIT_BTN.Click += new System.EventHandler(this.EXIT_BTN_Click);
             // 
-            // pictureBox1
+            // picbox_main
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(244, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 179);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.picbox_main.Image = ((System.Drawing.Image)(resources.GetObject("picbox_main.Image")));
+            this.picbox_main.Location = new System.Drawing.Point(161, 63);
+            this.picbox_main.Name = "picbox_main";
+            this.picbox_main.Size = new System.Drawing.Size(396, 246);
+            this.picbox_main.TabIndex = 8;
+            this.picbox_main.TabStop = false;
             // 
             // Game_form
             // 
@@ -144,19 +148,19 @@ namespace GameProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(736, 415);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picbox_main);
             this.Controls.Add(this.EXIT_BTN);
-            this.Controls.Add(this.PLAY_BTN);
+            this.Controls.Add(this.BTN_PLAYAGAIN);
             this.Controls.Add(this.GAMEPROJECT);
             this.Controls.Add(this.SHOOTAWAY_BTN);
-            this.Controls.Add(this.SHOOTONHEAD_BTN);
+            this.Controls.Add(this.BTN_SHOOT);
             this.Controls.Add(this.SPIN_BTN);
             this.Controls.Add(this.LOAD_BTN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Game_form";
             this.Text = "Game form";
             this.Load += new System.EventHandler(this.Game_form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_main)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,12 +175,12 @@ namespace GameProject
 
         private System.Windows.Forms.Button LOAD_BTN;
         private System.Windows.Forms.Button SPIN_BTN;
-        private System.Windows.Forms.Button SHOOTONHEAD_BTN;
+        private System.Windows.Forms.Button BTN_SHOOT;
         private System.Windows.Forms.Button SHOOTAWAY_BTN;
         private System.Windows.Forms.LinkLabel GAMEPROJECT;
-        private System.Windows.Forms.Button PLAY_BTN;
+        private System.Windows.Forms.Button BTN_PLAYAGAIN;
         private System.Windows.Forms.Button EXIT_BTN;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picbox_main;
 
         public EventHandler SHOOTONHEAD_BTN_Click { get; private set; }
     }
