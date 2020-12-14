@@ -25,15 +25,15 @@ namespace GameProject
 
         private void PLAY_BTN_Click(object sender, EventArgs e)
         {
-            Application.Restart(); // enables restart button 
+            Application.Restart(); // code for restart button 
         }
 
         private void Game_form_Load(object sender, EventArgs e)
         {
-            LOAD_BTN.Enabled = true; //Enable load button
-            SPIN_BTN.Enabled = false; //disable spin button
-            BTN_SHOOT.Enabled = false; //disable shoot button
-            SHOOTAWAY_BTN.Enabled = false; //disable shootaway button
+            LOAD_BTN.Enabled = true; //code for load button
+            SPIN_BTN.Enabled = false; //code for spin button
+            BTN_SHOOT.Enabled = false; //code for shoot button
+            SHOOTAWAY_BTN.Enabled = false; //code for shootaway button
         }
 
         private void LOAD_BTN_Click(object sender, EventArgs e)
@@ -47,11 +47,11 @@ namespace GameProject
             //code helps for sounds//
             System.Media.SoundPlayer sndObj = new System.Media.SoundPlayer(GameProject.Properties.Resources.gun_load);
             sndObj.Play();
-            //Enable spin button and disable other buttons
+            //Enable the spin button and disable other buttons
             SPIN_BTN.Enabled = true;
             LOAD_BTN.Enabled = false;
 
-            //set bullet at first position
+            //set the bullet at first position
             Obj_Game.Load = 1;
         }
 
